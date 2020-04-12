@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col position-relative p-0">
+      <div class="landing-card d-flex">
+        <h1 class="my-auto mx-auto landing-title text-center">
+          {{ blogPost?.title }}
+        </h1>
+        <div class="blog-bg">
+          <img [src]="backendURL+blogPost?.cover" [alt]="blogPost?.cover">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="row justify-content-center">
+      <div class="col-10 text-right date">
+        {{ moment.utc(blogPost?.createdAt).locale('fr').format('ll') }} à {{ moment.utc(blogPost?.createdAt).format('HH:mm') }}
+        <hr>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div [innerHTML]="blogPost?.content"></div>
+      </div>
+    </div>
+  </div>
+</div>

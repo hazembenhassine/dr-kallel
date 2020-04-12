@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col position-relative p-0">
+      <div class="landing-card d-flex">
+        <h1 class="my-auto mx-auto landing-title text-center">
+          Nouvelles<br>
+          orthopédiques
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="blog-cards">
+    <div *ngIf="isLoading" class="d-flex my-5 py-5">
+      <mat-spinner class="mx-auto"></mat-spinner>
+    </div>
+    <div *ngIf="!isLoading" class="row justify-content-center ">
+      <div *ngFor="let post of blogPosts, let i = index" class="col-5 pb-5">
+        <div class="image-container mx-auto">
+          <div class="image">
+            <img [src]="backendURL+post?.cover" [alt]="post?.title">
+          </div>
+        </div>
+        <div class="text-center post-title py-3">
+          {{ post?.title }}
+        </div>
+        <div *ngIf="!post?.isExpanded" class="post-text">
+          <span>{{ sanitize(post?.content.slice(0, 180)) }}...</span><a [routerLink]="'/blog/post/'+post?._id" class="read-full">LIRE LA SUITE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <med-paginator [pageSize]="pageSize" [pageIndex]="pageIndex" [size]="size" (page)="getBlogPosts($event)"></med-paginator>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row header py-2">
+    <div class="col-15 logo-col">
+    </div>
+    <div class="col-15 d-flex justify-content-center">
+      <a class="my-auto" routerLink="/academic-activity">A propos</a>
+    </div>
+    <div class="col-15 d-flex justify-content-center">
+      <a class="my-auto" (click)="goTo('#specialty', $event)" href="#">Spécialité</a>
+    </div>
+    <div class="col-3 title-col d-flex">
+      <a class="d-block my-auto text-center pt-2" routerLink="/home">
+        <img src="assets/header-title.png" alt="header title">
+      </a>
+    </div>
+    <div class="col-15 d-flex justify-content-center">
+      <a class="my-auto" routerLink="/blog">Blog</a>
+    </div>
+    <div class="col-15 d-flex justify-content-center">
+      <a class="my-auto" (click)="goTo('#contact', $event)" href="#">Contact</a>
+    </div>
+  </div>
+</div>

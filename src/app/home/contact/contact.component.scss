@@ -1,0 +1,33 @@
+.contact-title {
+  font-size: 46px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-style: italic;
+  color: #026ea1;
+}
+
+.loading-spinner {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.message {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 100%;
+  display: flex;
+}

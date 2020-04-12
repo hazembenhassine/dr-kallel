@@ -1,0 +1,14 @@
+.paginator-page-marker {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  border: solid 1px #0168a6;
+}
+
+.paginator-page-marker:hover {
+  cursor: pointer;
+}
+
+.paginator-page-marker.active {
+  background-color: #0168a6;
+}

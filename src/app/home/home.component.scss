@@ -1,0 +1,107 @@
+.landing-card {
+  background-image: url('../../assets/chirurgie-orthopedique-genou.png');
+}
+
+.tele-consultation {
+  font-size: 3vw;
+  letter-spacing: 0.3vw;
+  line-height: 1.1;
+  font-weight: 600;
+  font-style: italic;
+  color: #026ea1;
+}
+
+.image-col {
+  width: 38%;
+}
+
+.image-col img {
+  width: 100%;
+}
+
+.paragraph-title {
+  font-size: 3.5vw;
+}
+
+.primary {
+  color: #0168a6;
+}
+
+.paragraph {
+  font-size: 1.4vw;
+}
+
+.pain-container {
+  height: 100vh;
+}
+
+.pain-text {
+  height: 100%;
+}
+
+.text-col {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-col .dark-bg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  transition: all 0.5s;
+}
+
+.text-col:hover .dark-bg {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #1d1d1d;
+}
+
+.dark-bg > div {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-col:hover .pain-button {
+  background-color: #2e97d4;
+  color: #1d1d1d;
+}
+
+.pain-text .title-container {
+  height: 8.8vw;
+}
+
+.pain-text .title {
+  font-family: 'Lemon/Milk', sans-serif;
+  font-weight: 300;
+  font-size: 2vw;
+}
+
+.pain-text .paragraph-container {
+  height: 11vw;
+  font-size: 1vw;
+}
+
+.pain-button {
+  border: solid 1px #2e97d4;
+  background: transparent;
+  color: white;
+  padding: 0.5vw 1.45vw;
+  font-size: 1.3vw;
+  transition: all 0.5s;
+}
+
+.rdv {
+  background-color: #0168a6;
+}
+
+.rdv-button {
+  background: white;
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 6px 40px;
+}

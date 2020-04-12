@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.col-15 {
+  @include make-col-ready();
+  @include make-col(1.5);
+}
+
+.header {
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.header a {
+  color: black;
+}
+
+.header a:hover {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.title-col img {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-col {
+  background:url("../../../assets/logo.png") center no-repeat;
+  background-size: 15%;
+}

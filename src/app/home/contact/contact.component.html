@@ -1,0 +1,99 @@
+<div class="py-5 position-relative">
+  <div *ngIf="isLoading" class="loading-spinner">
+    <mat-spinner class="mx-auto my-auto"></mat-spinner>
+  </div>
+  <div *ngIf="success" class="message">
+    <div class="row justify-content-center my-auto w-100">
+      <div class="col-10 text-center">
+        <h1>Votre message a été soumis avec succès!</h1>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="failed" class="message">
+    <div class="row justify-content-center my-auto w-100">
+      <div class="col-10 text-center">
+        <h1>Impossible de soumettre votre message. Veuillez réessayer plus tard.</h1>
+      </div>
+      <div class="col-8 text-right py-4">
+        <button (click)="failed = false" class="med-btn px-5">
+          Retour
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <h2 class="contact-title">
+        Une question ? Un rendez-vous ?<br>
+        Discutons-en !
+      </h2>
+    </div>
+  </div>
+  <form (ngSubmit)="sendMessage()" [formGroup]="messageForm">
+    <div class="row justify-content-center">
+      <div class="col-9 py-5">
+        <div class="row justify-content-center my-3">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Nom</mat-label>
+              <input matInput formControlName="lname" type="text" placeholder="Ben Foulen">
+              <mat-error *ngIf="form.lname.invalid">Ce champ est requis!</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Prénom</mat-label>
+              <input matInput formControlName="fname" type="text" placeholder="Foulen">
+              <mat-error *ngIf="form.fname.invalid">Ce champ est requis!</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row justify-content-center my-3">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" type="email" placeholder="foulen.benfoulen@example.tn">
+              <mat-error *ngIf="form.email.invalid">Veuillez vérifier votre email!</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>N° de téléphone</mat-label>
+              <input (input)="keepDigits()" matInput formControlName="telephone" type="text" placeholder="71 000 000">
+              <mat-error *ngIf="form.telephone.invalid">Un numéro de téléphone est composé de 8 chiffres!</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row justify-content-center my-3">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Sujet</mat-label>
+              <input matInput formControlName="subject" type="text" placeholder="Sujet">
+              <mat-error *ngIf="form.subject.invalid">Ce champ est requis!</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row justify-content-center my-3">
+          <div class="col">
+            <mat-form-field class="w-100">
+              <mat-label>Message</mat-label>
+              <textarea formControlName="content" matInput
+                        cdkTextareaAutosize
+                        cdkAutosizeMinRows="1"
+                        cdkAutosizeMaxRows="5"
+                        placeholder="Message"></textarea>
+              <mat-error *ngIf="form.content.invalid">Ce champ est requis!</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row justify-content-center my-3">
+          <div class="col text-right">
+            <button [disabled]="messageForm.invalid" type="submit" class="med-btn px-5">
+              Envoyer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

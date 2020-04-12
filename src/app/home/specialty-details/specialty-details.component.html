@@ -1,0 +1,23 @@
+<h1 class="title my-3" mat-dialog-title>{{ specialty?.title }}</h1>
+<mat-dialog-content>
+  <div class="row justify-content-center">
+    <div class="col text">
+      {{ specialty?.description }}
+    </div>
+    <div class="col-5 d-flex">
+      <div class="image-container my-auto mx-auto">
+        <div class="image">
+          <img [src]="backendURL+specialty?.cover" [alt]="specialty?.title">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions class="justify-content-end">
+  <button mat-dialog-close class="med-btn px-3 my-2 mr-2">
+    Fermer
+  </button>
+</mat-dialog-actions>

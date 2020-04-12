@@ -1,0 +1,93 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+  MatAutocompleteModule,
+  MatToolbarModule,
+  MatMenuModule,
+  MatExpansionModule,
+  MatRadioModule,
+  MatCheckboxModule,
+  MatTabsModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatPaginatorModule,
+  MatDialogModule,
+  MatInputModule,
+  MatSnackBarModule,
+  MatButtonModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSlideToggleModule,
+  MatStepperModule,
+  MatSidenavModule,
+  MatListModule,
+  MatIconModule,
+  MatCardModule,
+  MatButtonToggleModule,
+  MatProgressSpinnerModule
+} from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatExpansionModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatInputModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSlideToggleModule,
+    MatStepperModule,
+    MatButtonToggleModule,
+    MatSidenavModule,
+    MatListModule,
+    MatProgressSpinnerModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatTabsModule,
+    MatSelectModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatStepperModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSlideToggleModule,
+    MatButtonToggleModule,
+    MatSidenavModule,
+    MatListModule,
+    MatProgressSpinnerModule
+  ]
+})
+export class MaterialModule { }

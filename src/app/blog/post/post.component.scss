@@ -1,0 +1,26 @@
+.blog-bg {
+  position: absolute;
+  height: 70%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.blog-bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.date {
+  color: #b3acab;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.text {
+  color: #222222;
+  font-weight: 300;
+}

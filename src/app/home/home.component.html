@@ -1,0 +1,108 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col position-relative">
+      <div class="landing-card d-flex">
+        <h1 class="my-auto mx-auto landing-title text-center">
+          PRENEZ SOIN<br>DE VOTRE CORP
+        </h1>
+      </div>
+      <div class="landing-btn-container">
+        <div class="row no-gutters">
+          <div class="col-4 text-center">
+            <button (click)="goTo(contact)" class="med-btn landing-width">
+              Prendre un rendez-vous
+            </button>
+          </div>
+          <div class="col">
+          </div>
+          <div class="col-4 text-center">
+            <button (click)="router.navigateByUrl('/academic-activity')" class="med-btn landing-width">
+              Activités académiques de Dr Kallel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-3">
+    <div class="col-8 text-center py-5">
+      <p class="tele-consultation">
+        Pour une téléconsultation avec Dr KALLEL veuillez nous rejoindre sur
+      </p>
+      <button (click)="goTo(contact)" class="med-btn landing-width my-3">
+        Téléconsultation
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="p-0 image-col">
+      <img src="assets/doctor-orthopedic.png" alt="doctor orthopedic">
+    </div>
+    <div class="col row no-gutters justify-content-center">
+      <div class="col-9 d-flex">
+        <div class="my-auto paragraph">
+          <h2 class="paragraph-title pb-5">Votre <span class="primary">Corps</span> & <span class="primary">l'Orthopédie</span></h2>
+          <p class="py-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+          </p>
+          <p class="py-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+          </p>
+          <p class="py-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="specialty" class="pain-container">
+    <div class="row pain-text">
+      <div *ngFor="let specialty of specialties, let i = index"
+           [ngStyle]="{'background-image': getStyleFromURL(backendURL+specialty?.cover)}"
+           class="col position-relative text-col p-0">
+        <div class="dark-bg d-flex">
+          <div class="text-center mt-auto">
+            <div class="title-container mb-1">
+              <h3 class="title mx-3">
+                {{ specialty?.title }}
+              </h3>
+            </div>
+            <div class="paragraph-container">
+              <p>
+                {{ specialty?.description.slice(0, 220) }}
+              </p>
+            </div>
+            <div class="pb-5">
+              <button (click)="openSpecialty(specialty)" class="pain-button">
+                En savoir plus
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <med-quote></med-quote>
+
+  <div class="row rdv py-5">
+    <div class="col text-center">
+      <button class="rdv-button">
+        Prenez un rendez-vous
+      </button>
+    </div>
+  </div>
+
+  <div #contact id="contact">
+    <med-contact></med-contact>
+  </div>
+
+  <div class="row">
+    <div class="col p-0">
+      <agm-map [latitude]="36.86" [longitude]="10.16" [zoom]="15" (mapClick)="console.log($event)" style="width: 100%; height: 420px"></agm-map>
+    </div>
+  </div>
+</div>
