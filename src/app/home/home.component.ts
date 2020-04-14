@@ -51,5 +51,9 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+  
+  navigateTo(link: string) {
+	  this.router.navigateByUrl('/academic-activity').then(() => {});
+  }
 
 }
