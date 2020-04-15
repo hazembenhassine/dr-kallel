@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-10">
+    <div class="col-11 col-md-10">
       <h2 class="contact-title">
         Une question ? Un rendez-vous ?<br>
         Discutons-en !
@@ -31,16 +31,16 @@
   </div>
   <form (ngSubmit)="sendMessage()" [formGroup]="messageForm">
     <div class="row justify-content-center">
-      <div class="col-9 py-5">
-        <div class="row justify-content-center my-3">
-          <div class="col">
+      <div class="col-11 col-md-9 py-2 py-md-5">
+        <div class="row justify-content-center">
+          <div class="col my-1 my-md-3">
             <mat-form-field class="w-100">
               <mat-label>Nom</mat-label>
               <input matInput formControlName="lname" type="text" placeholder="Ben Foulen">
               <mat-error *ngIf="form.lname.invalid">Ce champ est requis!</mat-error>
             </mat-form-field>
           </div>
-          <div class="col">
+          <div class="col my-1 my-md-3">
             <mat-form-field class="w-100">
               <mat-label>Prénom</mat-label>
               <input matInput formControlName="fname" type="text" placeholder="Foulen">
@@ -48,15 +48,15 @@
             </mat-form-field>
           </div>
         </div>
-        <div class="row justify-content-center my-3">
-          <div class="col">
+        <div class="row justify-content-center">
+          <div class="col my-1 my-md-3">
             <mat-form-field class="w-100">
               <mat-label>Email</mat-label>
               <input matInput formControlName="email" type="email" placeholder="foulen.benfoulen@example.tn">
               <mat-error *ngIf="form.email.invalid">Veuillez vérifier votre email!</mat-error>
             </mat-form-field>
           </div>
-          <div class="col">
+          <div class="col my-1 my-md-3">
             <mat-form-field class="w-100">
               <mat-label>N° de téléphone</mat-label>
               <input (input)="keepDigits()" matInput formControlName="telephone" type="text" placeholder="71 000 000">
@@ -64,8 +64,8 @@
             </mat-form-field>
           </div>
         </div>
-        <div class="row justify-content-center my-3">
-          <div class="col">
+        <div class="row justify-content-center">
+          <div class="col my-1 my-md-3">
             <mat-form-field class="w-100">
               <mat-label>Sujet</mat-label>
               <input matInput formControlName="subject" type="text" placeholder="Sujet">
@@ -73,8 +73,8 @@
             </mat-form-field>
           </div>
         </div>
-        <div class="row justify-content-center my-3">
-          <div class="col">
+        <div class="row justify-content-center">
+          <div class="col my-1 my-md-3">
             <mat-form-field class="w-100">
               <mat-label>Message</mat-label>
               <textarea formControlName="content" matInput
@@ -86,8 +86,8 @@
             </mat-form-field>
           </div>
         </div>
-        <div class="row justify-content-center my-3">
-          <div class="col text-right">
+        <div class="row justify-content-center">
+          <div class="col text-right my-1 my-md-3">
             <button [disabled]="messageForm.invalid" type="submit" class="med-btn px-5">
               Envoyer
             </button>

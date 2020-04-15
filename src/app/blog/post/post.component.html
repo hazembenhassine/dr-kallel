@@ -13,13 +13,13 @@
   </div>
   <div class="py-5">
     <div class="row justify-content-center">
-      <div class="col-10 text-right date">
+      <div class="col-11 col-md-10 text-right date">
         {{ moment.utc(blogPost?.createdAt).locale('fr').format('ll') }} à {{ moment.utc(blogPost?.createdAt).format('HH:mm') }}
         <hr>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-11 col-md-10">
         <div [innerHTML]="blogPost?.content"></div>
       </div>
     </div>

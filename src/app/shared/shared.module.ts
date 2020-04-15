@@ -5,6 +5,7 @@ import { MaterialModule } from '../core/material/material.module';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from '@angular/router';
 import { PaginatorComponent } from './paginator/paginator.component';
+import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PaginatorComponent } from './paginator/paginator.component';
     imports: [
         CommonModule,
         MaterialModule,
-        RouterModule
+        RouterModule,
+        NgbCollapseModule
     ],
   exports: [
     HeaderComponent,

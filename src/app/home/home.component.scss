@@ -1,9 +1,13 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
 .landing-card {
   background-image: url('../../assets/chirurgie-orthopedique-genou.png');
 }
 
 .tele-consultation {
-  font-size: 3vw;
+  font-size: max(3vw, 18px);
   letter-spacing: 0.3vw;
   line-height: 1.1;
   font-weight: 600;
@@ -11,24 +15,33 @@
   color: #026ea1;
 }
 
+
 .image-col {
-  width: 38%;
+  height: 200px;
+  overflow: hidden;
+}
+
+@include media-breakpoint-up(md) {
+  .image-col {
+    height: auto;
+    width: 38%;
+  }
 }
 
 .image-col img {
   width: 100%;
 }
 
+.paragraph {
+  font-size: max(1.4vw, 12px);
+}
+
 .paragraph-title {
-  font-size: 3.5vw;
+  font-size: max(3.5vw, 22px);
 }
 
 .primary {
   color: #0168a6;
-}
-
-.paragraph {
-  font-size: 1.4vw;
 }
 
 .pain-container {
@@ -76,12 +89,12 @@
 .pain-text .title {
   font-family: 'Lemon/Milk', sans-serif;
   font-weight: 300;
-  font-size: 2vw;
+  font-size: max(2vw, 18px);
 }
 
 .pain-text .paragraph-container {
-  height: 11vw;
-  font-size: 1vw;
+  height: max(11vw, 100px);
+  font-size: max(1vw, 12px);
 }
 
 .pain-button {
@@ -89,7 +102,7 @@
   background: transparent;
   color: white;
   padding: 0.5vw 1.45vw;
-  font-size: 1.3vw;
+  font-size: max(1.3vw, 16px);
   transition: all 0.5s;
 }
 

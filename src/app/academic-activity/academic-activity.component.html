@@ -13,7 +13,7 @@
     <div *ngIf="isLoading" class="d-flex my-5 py-5">
       <mat-spinner class="mx-auto"></mat-spinner>
     </div>
-    <div *ngIf="!isLoading">
+    <div class="d-none d-md-block" *ngIf="!isLoading">
       <div *ngFor="let activity of activities, let i = index" class="row justify-content-center">
         <div *ngIf="i%2 == 0" class="col-5 pb-5 d-flex">
           <div class="image-container my-auto">
@@ -39,6 +39,34 @@
           <div class="image-container">
             <div class="image">
               <img [src]="backendURL+activity?.cover" [alt]="activity?.title">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-md-none" *ngIf="!isLoading">
+      <div *ngFor="let activity of activities, let i = index">
+        <div class="row justify-content-center">
+          <div class="col-11 pb-1 d-flex">
+            <div class="image-container my-auto mx-auto">
+              <div class="image">
+                <img [src]="backendURL+activity?.cover" [alt]="activity?.title">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-10 pb-5 d-flex activity-card">
+            <div class="my-auto w-100">
+              <div class="text-center post-title py-3">
+                {{ activity?.title }}
+              </div>
+              <div *ngIf="!activity?.isExpanded" class="post-text text-center">
+                {{ activity?.description.slice(0, Math.min(Math.floor(activity?.description?.length * 0.7), 180)) }}...<span (click)="activity.isExpanded = true" class="read-full">LIRE LA SUITE</span>
+              </div>
+              <div *ngIf="activity?.isExpanded" class="post-text text-center">
+                {{ activity?.description }}
+              </div>
             </div>
           </div>
         </div>

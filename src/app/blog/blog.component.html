@@ -14,7 +14,7 @@
       <mat-spinner class="mx-auto"></mat-spinner>
     </div>
     <div *ngIf="!isLoading" class="row justify-content-center ">
-      <div *ngFor="let post of blogPosts, let i = index" class="col-5 pb-5">
+      <div *ngFor="let post of blogPosts, let i = index" class="col-10 col-md-5 pb-5">
         <div class="image-container mx-auto">
           <div class="image">
             <img [src]="backendURL+post?.cover" [alt]="post?.title">

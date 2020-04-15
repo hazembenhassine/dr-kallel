@@ -1,25 +1,27 @@
 .vr {
   width: 2px;
-  height: 100px;
+  height: min(100px, 20vw);
   background-color: #0168a6;
 }
 
 .quote {
+  padding-top: 2.1vw;
+  padding-bottom: 2.1vw;
   background: url("../../../assets/quote-marks.png") no-repeat center;
   background-size: contain;
-  font-size: 1vw;
+  font-size: max(1vw, 13px);
 }
 
 .quote-title {
   font-family: 'Lemon/Milk', sans-serif;
   font-weight: 300;
-  font-size: 4vw;
+  font-size: max(4vw, 24px);
   color: #0168a6;
 }
 
 .quote-author {
   font-family: 'Lemon/Milk', sans-serif;
-  font-size: 1vw;
+  font-size: max(1vw, 13px);
   font-weight: 300;
   color: #0168a6;
 }

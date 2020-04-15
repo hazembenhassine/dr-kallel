@@ -8,15 +8,15 @@
       </div>
       <div class="landing-btn-container">
         <div class="row no-gutters">
-          <div class="col-4 text-center">
-            <button (click)="goTo(contact)" class="med-btn landing-width">
+          <div class="col-md-4 text-center">
+            <button (click)="goTo(contact)" class="med-btn landing-width my-1">
               Prendre un rendez-vous
             </button>
           </div>
           <div class="col">
           </div>
-          <div class="col-4 text-center">
-            <button (click)="navigateTo('/academic-activity')" class="med-btn landing-width">
+          <div class="col-md-4 text-center">
+            <button (click)="navigateTo('/academic-activity')" class="med-btn landing-width my-1">
               Activités académiques de Dr Kallel
             </button>
           </div>
@@ -26,13 +26,15 @@
   </div>
 
   <div class="row justify-content-center my-3">
-    <div class="col-8 text-center py-5">
+    <div class="col-8 text-center py-3 py-md-5">
       <p class="tele-consultation">
         Pour une téléconsultation avec Dr KALLEL veuillez nous rejoindre sur
       </p>
-      <button (click)="goTo(contact)" class="med-btn landing-width my-3">
-        Téléconsultation
-      </button>
+      <div class="d-flex">
+        <button (click)="goTo(contact)" class="med-btn landing-width my-3 mx-auto">
+          Téléconsultation
+        </button>
+      </div>
     </div>
   </div>
 
@@ -41,16 +43,16 @@
       <img src="assets/doctor-orthopedic.png" alt="doctor orthopedic">
     </div>
     <div class="col row no-gutters justify-content-center">
-      <div class="col-9 d-flex">
+      <div class="col-10 col-md-9 d-flex py-4">
         <div class="my-auto paragraph">
-          <h2 class="paragraph-title pb-5">Votre <span class="primary">Corps</span> & <span class="primary">l'Orthopédie</span></h2>
-          <p class="py-3">
+          <h2 class="paragraph-title pb-3 pb-md-5">Votre <span class="primary">Corps</span> & <span class="primary">l'Orthopédie</span></h2>
+          <p class="py-md-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
           </p>
-          <p class="py-3">
+          <p class="py-md-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
           </p>
-          <p class="py-3">
+          <p class="py-md-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
           </p>
         </div>
@@ -62,10 +64,10 @@
     <div class="row pain-text">
       <div *ngFor="let specialty of specialties, let i = index"
            [ngStyle]="{'background-image': getStyleFromURL(backendURL+specialty?.cover)}"
-           class="col position-relative text-col p-0">
+           class="col-md position-relative text-col p-0">
         <div class="dark-bg d-flex">
           <div class="text-center mt-auto">
-            <div class="title-container mb-1">
+            <div class="title-container mb-1 mt-4">
               <h3 class="title mx-3">
                 {{ specialty?.title }}
               </h3>

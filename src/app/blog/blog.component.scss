@@ -36,15 +36,16 @@
 .post-title {
   font-family: 'Lemon/Milk', sans-serif;
   font-weight: 300;
-  font-size: 1.9vw;
+  font-size: max(1.9vw, 18px);
   color: #0168a6;
 }
 
 .post-text {
-  width: 90%;
-  font-size: 1vw;
+  width: 100%;
+  font-size: max(1vw, 13px);
   color: #222222;
   font-weight: 300;
+  text-align: center;
 }
 
 .read-full {
