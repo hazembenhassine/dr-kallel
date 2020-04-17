@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { AgmCoreModule } from '@agm/core';
 import { MedService } from './core/services/med.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
       apiKey: 'AIzaSyDYPNbjx2XPZn3DmYbJnJBvprWddtjS5k8'
     })
   ],
-  providers: [MedService],
+  providers: [
+    MedService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
