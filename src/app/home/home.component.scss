@@ -45,7 +45,9 @@
 }
 
 .pain-container {
-  height: 100vh;
+  @include media-breakpoint-up(md) {
+    height: 100vh;
+  }
 }
 
 .pain-text {

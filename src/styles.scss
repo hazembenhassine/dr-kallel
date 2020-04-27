@@ -59,6 +59,15 @@ body { margin: 0; font-family: 'Titillium Web', sans-serif; }
   font-weight: 600;
 }
 
+.med-btn-sm {
+  border: solid 1px #0168a6;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-size: max(1.2vw, 12px);
+  padding: 3px;
+  font-weight: 600;
+}
+
 button:focus {
   outline: none;
 }
