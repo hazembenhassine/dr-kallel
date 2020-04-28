@@ -10,7 +10,7 @@ import {environment} from '../../../environments/environment';
 })
 export class SpecialtyDetailsComponent implements OnInit {
 
-  backendURL = environment.api.backendURL;
+  uploadURL = environment.api.uploadURL;
   specialty: Specialty;
 
   constructor(private dialogRef: MatDialogRef<SpecialtyDetailsComponent>,

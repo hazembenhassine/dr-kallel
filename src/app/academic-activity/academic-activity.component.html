@@ -18,7 +18,7 @@
         <div *ngIf="i%2 == 0" class="col-5 pb-5 d-flex">
           <div class="image-container my-auto">
             <div class="image">
-              <img [src]="backendURL+activity?.cover" [alt]="activity?.title">
+              <img [src]="uploadURL+activity?.cover" [alt]="activity?.title">
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@
         <div *ngIf="i%2 == 1" class="col-5 pb-5">
           <div class="image-container">
             <div class="image">
-              <img [src]="backendURL+activity?.cover" [alt]="activity?.title">
+              <img [src]="uploadURL+activity?.cover" [alt]="activity?.title">
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
           <div class="col-11 pb-1 d-flex">
             <div class="image-container my-auto mx-auto">
               <div class="image">
-                <img [src]="backendURL+activity?.cover" [alt]="activity?.title">
+                <img [src]="uploadURL+activity?.cover" [alt]="activity?.title">
               </div>
             </div>
           </div>

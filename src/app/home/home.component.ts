@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   specialties: Specialty[];
 
-  backendURL = environment.api.backendURL;
+  uploadURL = environment.api.uploadURL;
 
   constructor(private api: MedService,
               private router: Router,
@@ -51,9 +51,10 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-  
+
   navigateTo(link: string) {
-	  this.router.navigateByUrl('/academic-activity').then(() => {});
+    console.log(link);
+    this.router.navigateByUrl('/academic-activity').then(() => {});
   }
 
 }

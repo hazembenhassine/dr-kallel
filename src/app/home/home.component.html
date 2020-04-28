@@ -76,7 +76,7 @@
   <div id="specialty" class="pain-container">
     <div class="row pain-text">
       <div *ngFor="let specialty of specialties, let i = index"
-           [ngStyle]="{'background-image': getStyleFromURL(backendURL+specialty?.cover)}"
+           [ngStyle]="{'background-image': getStyleFromURL(uploadURL+specialty?.cover)}"
            class="col-md position-relative text-col p-0">
         <div class="dark-bg d-flex">
           <div class="text-center mt-auto">

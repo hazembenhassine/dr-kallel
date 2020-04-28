@@ -17,7 +17,7 @@
       <div *ngFor="let post of blogPosts, let i = index" class="col-10 col-md-5 pb-5">
         <div class="image-container mx-auto">
           <div class="image">
-            <img [src]="backendURL+post?.cover" [alt]="post?.title">
+            <img [src]="uploadURL+post?.cover" [alt]="post?.title">
           </div>
         </div>
         <div class="text-center post-title py-3">

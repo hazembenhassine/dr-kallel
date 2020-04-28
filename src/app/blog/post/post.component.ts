@@ -17,7 +17,7 @@ export class PostComponent implements OnInit {
   id: string;
   blogPost: Blog;
 
-  backendURL = environment.api.backendURL;
+  uploadURL = environment.api.uploadURL;
 
   constructor(private api: MedService,
               private route: ActivatedRoute,

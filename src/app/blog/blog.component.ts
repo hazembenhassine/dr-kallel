@@ -19,7 +19,7 @@ export class BlogComponent implements OnInit {
 
   isLoading: boolean;
   blogPosts: Blog[];
-  backendURL = environment.api.backendURL;
+  uploadURL = environment.api.uploadURL;
 
   constructor(private api: MedService) { }
 

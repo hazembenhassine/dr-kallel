@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   api: {
-    backendURL: 'https://drkallel.herokuapp.com/'
+    backendURL: 'https://drkallel.herokuapp.com/',
+    uploadURL: 'http://ortho-surgeon.tn/'
   }
 };
 
