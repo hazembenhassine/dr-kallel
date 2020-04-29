@@ -61,11 +61,15 @@
               <div class="text-center post-title py-3">
                 {{ activity?.title }}
               </div>
-              <div *ngIf="!activity?.isExpanded" class="post-text text-center">
-                {{ activity?.description.slice(0, Math.min(Math.floor(activity?.description?.length * 0.7), 180)) }}...<span (click)="activity.isExpanded = true" class="read-full">LIRE LA SUITE</span>
+              <div *ngIf="!activity?.isExpanded" class="post-text">
+                <p class="text-justify">
+                  {{ activity?.description.slice(0, Math.min(Math.floor(activity?.description?.length * 0.7), 180)) }}...<span (click)="activity.isExpanded = true" class="read-full">LIRE LA SUITE</span>
+                </p>
               </div>
-              <div *ngIf="activity?.isExpanded" class="post-text text-center">
-                {{ activity?.description }}
+              <div *ngIf="activity?.isExpanded" class="post-text">
+                <p class="text-justify">
+                  {{ activity?.description }}
+                </p>
               </div>
             </div>
           </div>

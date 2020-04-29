@@ -23,8 +23,12 @@
         <div class="text-center post-title py-3">
           {{ post?.title }}
         </div>
-        <div *ngIf="!post?.isExpanded" class="post-text">
-          <span>{{ sanitize(post?.content.slice(0, 180)) }}...</span><a [routerLink]="'/blog/post/'+post?._id" class="read-full">LIRE LA SUITE</a>
+        <div class="d-flex">
+          <div *ngIf="!post?.isExpanded" class="post-text mx-auto">
+            <p class="text-justify">
+              <span>{{ sanitize(post?.content).slice(0, 300) }}...</span><a [routerLink]="'/blog/post/'+post?._id" class="read-full">LIRE LA SUITE</a>
+            </p>
+            </div>
         </div>
       </div>
     </div>

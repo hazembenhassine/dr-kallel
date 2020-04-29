@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
@@ -36,10 +38,6 @@
   font-size: max(1.4vw, 12px);
 }
 
-.paragraph-title {
-  font-size: max(3.5vw, 22px);
-}
-
 .primary {
   color: #0168a6;
 }
@@ -69,7 +67,7 @@
 }
 
 .text-col:hover .dark-bg {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   color: #1d1d1d;
 }
 
@@ -119,4 +117,17 @@
   font-size: 20px;
   letter-spacing: 2px;
   padding: 6px 40px;
+  border-radius: 15px;
+  transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.rdv-button:hover {
+  color: white;
+  background-color: #01476E;
+}
+
+.paragraph-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: max(3.5vw, 22px);
 }

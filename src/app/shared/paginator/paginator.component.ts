@@ -32,13 +32,14 @@ export class PaginatorComponent implements OnInit, OnChanges {
     const event = new PageEvent();
     event.pageSize = this.pageSize;
     event.pageIndex = this.pageIndex;
-    console.log(event);
     this.page.emit(event);
   }
 
   setPageIndex(index: number) {
-    this.pageIndex = index;
-    this.emitEvent();
+    if (this.pageIndex !== index) {
+      this.pageIndex = index;
+      this.emitEvent();
+    }
   }
 
   incrementPageIndex() {

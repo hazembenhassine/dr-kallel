@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
@@ -63,19 +63,41 @@ body { margin: 0; font-family: 'Titillium Web', sans-serif; }
 .med-btn {
   border: solid 1px #0168a6;
   background-color: #ffffff;
-  border-radius: 5px;
+  color: black;
+  border-radius: 15px;
   font-size: max(1.6vw, 12px);
   padding: 6px;
   font-weight: 600;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.med-btn.disabled {
+  opacity: 0.6;
+}
+
+.med-btn.disabled:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.med-btn:hover {
+  background-color: #08589D;
+  color: white;
 }
 
 .med-btn-sm {
   border: solid 1px #0168a6;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 9px;
   font-size: max(1.2vw, 12px);
   padding: 3px;
   font-weight: 600;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.med-btn-sm:hover {
+  background-color: #08589D;
+  color: white;
 }
 
 button:focus {
@@ -121,11 +143,4 @@ button:focus {
   @include media-breakpoint-down(lg) {
     height: 60px;
   }
-}
-
-.detail-title {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  font-size: 36px;
-  color: #0168a6;
 }
