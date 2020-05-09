@@ -49,3 +49,16 @@
   left: 0;
   bottom: 0;
 }
+
+.ear-logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+.ear-logo > img {
+  height: 50%;
+  margin: auto 10px;
+}

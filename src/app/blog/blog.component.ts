@@ -3,6 +3,7 @@ import { environment } from '../../environments/environment';
 import { Blog } from '../core/models/blog.model';
 import {MedService} from '../core/services/med.service';
 import {PageEvent} from '@angular/material';
+import {TitleTagService} from '../core/services/title-tag.service';
 
 @Component({
   selector: 'med-blog',
@@ -21,7 +22,8 @@ export class BlogComponent implements OnInit {
   blogPosts: Blog[];
   uploadURL = environment.api.uploadURL;
 
-  constructor(private api: MedService) { }
+  constructor(private api: MedService,
+              private tagService: TitleTagService) { }
 
   ngOnInit() {
     this.isLoading = false;
@@ -30,6 +32,14 @@ export class BlogComponent implements OnInit {
     this.size = 0;
 
     this.getBlogPosts();
+    this.tagService.setTitle('Blog | Dr. Sofiene Kallel - Orthopédiste');
+    this.tagService.setSocialMediaTags(
+      `${this.tagService.baseLink}#/blog`,
+      `Blog | Dr. Sofiene Kallel - Orthopédiste`,
+      // tslint:disable-next-line:max-line-length
+      `Chirurgien Orthopédiste, Professeur Agrégé en Chirurgie orthopédique et Traumatologie. Dr. Kallel est membre de sociétés savantes suivantes : Société Tunisienne de Chirurgie Orthopédique et Traumatologique. Association Tunisienne d’Etude et de recherche de l’Appareil Locomoteur. Société Tunisienne d’Informatique Médicale. American Academy of Orthopaedic Surgeons AAOS. Association Tunisienne de Médecine et de Chirurgie du Pied et de la cheville. Tunisian Society of Arthroscopy and sport Surgery (President) Société Tunisienne de Recherche en Orthopédie Traumatologie.`,
+      `${this.tagService.baseLink}assets/6251.png`
+    );
   }
 
   getBlogPosts(event?: PageEvent) {

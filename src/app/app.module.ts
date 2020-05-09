@@ -7,7 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { AgmCoreModule } from '@agm/core';
 import { MedService } from './core/services/med.service';
 import { HttpClientModule } from '@angular/common/http';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {APP_BASE_HREF, HashLocationStrategy, LocationStrategy, PlatformLocation} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,12 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   ],
   providers: [
     MedService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    {
+      provide: APP_BASE_HREF,
+      useFactory: (s: PlatformLocation) => s.getBaseHrefFromDOM(),
+      deps: [PlatformLocation]
+    }
   ],
   bootstrap: [AppComponent]
 })

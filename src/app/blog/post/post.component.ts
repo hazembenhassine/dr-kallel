@@ -4,6 +4,7 @@ import { MedService } from '../../core/services/med.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {environment} from '../../../environments/environment';
 import * as moment from 'moment';
+import {TitleTagService} from '../../core/services/title-tag.service';
 
 @Component({
   selector: 'med-post',
@@ -21,7 +22,8 @@ export class PostComponent implements OnInit {
 
   constructor(private api: MedService,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private tagService: TitleTagService) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
@@ -31,10 +33,21 @@ export class PostComponent implements OnInit {
   getBlogData() {
     this.api.getBlogById(this.id).then(({item}) => {
       this.blogPost = item;
+      this.tagService.setTitle(`${this.blogPost.title.trim()} | Dr. Sofiene Kallel - Orthopédiste`);
+      this.tagService.setSocialMediaTags(
+        `${this.tagService.baseLink}#/blog/post/${this.id}`,
+        `${this.blogPost.title.trim()} | Dr. Sofiene Kallel - Orthopédiste`,
+        this.sanitize(this.blogPost.content).slice(0, 150) + '...',
+        this.uploadURL + this.blogPost.cover
+      );
     }).catch(() => {
       console.log('Not found');
       this.router.navigateByUrl('/blog').then(() => {});
     });
+  }
+
+  sanitize(str: string) {
+    return str.replace(/<[^>]*>/g, '');
   }
 
 }
