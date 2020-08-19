@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getSpecialties();
+    this.tagService.setTitle('Dr. Sofiene Kallel - Orthopédiste');
     this.tagService.setSocialMediaTags(
       `${this.tagService.baseLink}#/home`,
       `Dr. Sofiene Kallel - Orthopédiste`,
